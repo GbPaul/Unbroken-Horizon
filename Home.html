@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Unbroken Horizon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="Beverages.js"></script>
+    <script type="text/javascript" src="DBLoaded.js"></script>
+    <script type="text/javascript" src="loader.js"></script>
+
+    <script type="text/javascript" src="login.js"></script>
+	<script type="text/javascript" src="display.js"></script>
+	<script type="text/javascript" src="cancel_confirmOrder.js"></script>
+	<script type="text/javascript" src="language.js"></script>
+	<script type="text/javascript" src="addtoOrder.js"></script>
+	<script type="text/javascript" src="drag_drop.js"></script>
+    <script type="text/javascript" src="undo_redo.js"></script>
+	<script type="text/javascript" src="menuhandler.js"></script>
+
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+ <!-- Menutabs, used to select navigation-->
+<div class="navbar">
+  <a class="lang" key="home" >Home</a>
+  <a class="lang" key="members"  href="Members.html" >Members</a>
+  <div class="dropdown">
+    <button class="dropbtn" class="lang" key="language" >Language
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+		<a href=Home.html target="_self" id="en" class="translate"> English</a>
+		<a href=Home-Chinese.html target="_self" id="ch" class="translate">中文</a>
+    </div>
+  </div> 
+</div>
+		 <!-- Menutabs, used to select the correct menu below -->
+ <img src="ii.jpg" width=100% height=100%/>
+<p style="color:burlywood; font-family: 'HoloLens MDL2 Assets';font-size: larger; " align="center" >
+    Menu and Order
+</p>
+
+<hr/>
+</br>
+<div class="columns">
+	<div class="col-3 mtabs" id="menutabs">
+		<ul id="mtabs">
+			<li id="allfood">Beaverages</li>
+			<li id="starters">Starters</li>
+			<li id="mains">Main courses</li>
+			<li id="desserts">Desserts</li>
+			<li id="drinks">VIP only</li>
+		</ul>
+	</div>
+	
+	<div class="col-4 menu" id="beverage"></div>
+	<div class="col-4 menu" id="starter"></div>
+	<div class="col-4 menu" id="main"></div>
+	<div class="col-4 menu" id="dessert"></div>
+	<div class="col-4 menu" id="drink"></div>
+	
+
+	<!-- <form class ="col-5 order" id="orderslist" NAME="inputfield"></form> -->	
+<!-- 		<div class="col-1 btns" id="btns">
+
+	</div> -->
+	<div class="col-4">
+		<div class="order" id="allorders"></div>
+		<INPUT class="button" TYPE="button" NAME="button" Value="Undo" onClick="undo()"/>
+		<INPUT class="button" TYPE="button" NAME="button" Value="Redo" onClick="redo()"/>
+		<INPUT class="button" TYPE="button" NAME="button" Value="Cancel" onClick="cancel()"/>
+		<INPUT class="button" TYPE="button" NAME="button" Value="Order" onClick="confirmOrder()"/>
+		<INPUT class="button" TYPE="button" NAME="button" Value="Stock" onClick="seeStock()"/>
+	</div>
+		
+		</br><textarea TYPE="text" style="opacity:0" id="displaybartender" cols="135" rows="1"></textarea><p></p>
+		
+		</br><textarea TYPE="text" style="opacity:0" id="displayorders" NAME="displayorders" cols="135" rows="1"></textarea><p></p>
+		
+		</br><textarea TYPE="text" style="opacity:0" id="displayactions" cols="135" rows="1"></textarea><p></p> 
+
+
+
+	
+</div>
+</hr>
+
+</body>
+</html>
+
+
+
+

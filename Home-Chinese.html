@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Unbroken Horizon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js">
+        <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="Beverages.js"></script>
+    <script type="text/javascript" src="DBLoaded.js"></script>
+    <script type="text/javascript" src="loader.js"></script>
+
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="display.js"></script>
+    <script type="text/javascript" src="cancel_confirmOrder.js"></script>
+    <script type="text/javascript" src="language.js"></script>
+    <script type="text/javascript" src="addtoOrder.js"></script>
+    <script type="text/javascript" src="drag_drop.js"></script>
+    <script type="text/javascript" src="undo_redo.js"></script>
+
+    <script type="text/javascript" src="menuhandler-Chinese.js"></script>
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Menutabs, used to select navigation-->
+<div class="navbar">
+    <a class="lang" key="home" >主页</a>
+    <a class="lang" key="members"  href="Members.html" >会员</a>
+    <div class="dropdown">
+        <button class="dropbtn" class="lang" key="language" >语言
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href=Home.html target="_self" id="en" class="translate"> English</a>
+            <a href=Home-Chinese.html target="_self" id="ch" class="translate">中文</a>
+        </div>
+    </div>
+</div>
+
+<img src="ii.jpg" width=100% height=100%/>
+<p style="color:burlywood; font-family: 'HoloLens MDL2 Assets';font-size: larger; " align="center" >
+    菜单和订单
+</p>
+
+<hr/>
+</br>
+<div class="columns">
+    <div class="col-3 mtabs" id="menutabs">
+        <ul id="mtabs">
+            <li id="allfood">酒水</li>
+            <li id="starters">前餐</li>
+            <li id="mains">主食</li>
+            <li id="desserts">甜点</li>
+            <li id="drinks">会员</li>
+        </ul>
+    </div>
+
+    <div class="col-4 menu" id="beverage"></div>
+    <div class="col-4 menu" id="starter"></div>
+    <div class="col-4 menu" id="main"></div>
+    <div class="col-4 menu" id="dessert"></div>
+    <div class="col-4 menu" id="drink"></div>
+
+
+    <!-- <form class ="col-5 order" id="orderslist" NAME="inputfield"></form> -->
+    <div class="col-4">
+        <div class="order" id="allorders"></div>
+    </div>
+    <div class="col-1 btns" id="btns">
+        <INPUT class="button" TYPE="button" NAME="button" Value="撤销" onClick="undo()"/>
+        <INPUT class="button" TYPE="button" NAME="button" Value="重做" onClick="redo()"/>
+        <INPUT class="button" TYPE="button" NAME="button" Value="取消" onClick="cancel()"/>
+        <INPUT class="button" TYPE="button" NAME="button" Value="提交" onClick="confirmOrder()"/>
+		<INPUT class="button" TYPE="button" NAME="button" Value="库存" onClick="seeStock()"/>
+	</div>
+	
+		</br><textarea TYPE="text" style="opacity:0" id="displaybartender" cols="135" rows="1"></textarea><p></p>
+		
+		</br><textarea TYPE="text" style="opacity:0" id="displayorders" NAME="displayorders" cols="135" rows="1"></textarea><p></p>
+		
+		</br><textarea TYPE="text" style="opacity:0" id="displayactions" cols="135" rows="1"></textarea><p></p> 
+
+</div>
+</hr>
+
+</body>
+</html>
